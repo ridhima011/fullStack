@@ -1,0 +1,186 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background Image */
+.start-page {
+  background: url('../assets/bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  /* display: inline-block; */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+
+
+/* Title */
+.site-title {
+  /* justify-content:start; */
+  display: inline;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+.nav-bar {
+  display: flex;
+  
+  align-items: center;
+  /* flex-grow: 1; Makes sure it fills available space */
+}
+
+.nav-bar ul {
+  justify-content: start;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-bar li {
+  display: inline-block;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: rgb(15, 14, 14);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-bar a:hover {
+  color: red;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.signup-btn, .login-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block; /* Ensures proper spacing */
+}
+.signup-btn {
+  background-color: rgb(158, 127, 127);
+
+  color: rgb(13, 12, 12);
+}
+
+.login-btn {
+  background-color: rgb(158, 127, 127);
+
+  color: black;
+}
+
+.signup-btn:hover, .login-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Tagline */
+.tagline {
+  margin-top: 15%;
+  text-align: center;
+}
+
+.tagline h3 {
+  font-size: 1.8rem;
+  color: rgb(158, 127, 127);
+  background: transparent;
+}
+
+.tagline span {
+  color: rgb(23, 22, 22);
+  font-weight: bold;
+}
+
+/* Live Updates */
+.live-updates {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.red-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(13, 12, 12);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.live-updates p {
+  color: rgb(158, 127, 127); color: rgb(204, 167, 167);
+  font-weight: bold;
+}
+
+/* Content Layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.left-sidebar, .right-sidebar {
+  width: 20%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+.left-sidebar h3, .right-sidebar h3 {
+  color: red;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.right-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .start-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-sidebar, .right-sidebar {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .nav-bar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
